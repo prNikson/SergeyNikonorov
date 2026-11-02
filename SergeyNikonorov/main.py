@@ -61,11 +61,18 @@ def task_7():
 
 def task_8():
     class Laptop:
+        brand: str
+        model: str
+        price: int
+
         def __init__(self, brand: str, model: str, price: int) -> None:
             self.brand = brand
             self.model = model
             self.price = price
-            self.laptop_name = f"{self.brand} {self.model}"
+
+        @property
+        def laptop_name(self) -> str:
+            return f"{self.brand} {self.model}"
 
 def task_9():
     class Promise:
